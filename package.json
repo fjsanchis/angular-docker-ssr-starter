@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4200 --host 0.0.0.0 --poll",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/platform-server": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "@angular/service-worker": "~9.1.9",
     "@nguniversal/express-engine": "^9.1.1",
     "express": "^4.15.2",
     "rxjs": "~6.5.4",
