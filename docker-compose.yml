@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  ng-docker-ssr-starter-dev:
+    image: ng-docker-ssr-starter-dev
+    tty: true
+    stdin_open: true
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    environment:
+      NODE_ENV: development
+    ports:
+      - 4200:4200
+    command: npm start
